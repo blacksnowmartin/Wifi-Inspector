@@ -1,6 +1,6 @@
+#bsmartin
 import android.content.Context
 import android.net.wifi.WifiManager
-import android.net.wifi.WifiConfiguration
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,28 +15,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        ssidTextView = findViewById(R.id.ssidTextView)
-        bssidTextView = findViewById(R.id.bssidTextView)
-        securityStatusTextView = findViewById(R.id.securityStatusTextView)
-
+        initializeViews()
         wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
         displayWifiInfo()
     }
 
+    private fun initializeViews() {
+        ssidTextView = findViewById(R.id.ssidTextView)
+        bssidTextView = findViewById(R.id.bssidTextView)
+        securityStatusTextView = findViewById(R.id.securityStatusTextView)
+    }
+
     private fun displayWifiInfo() {
         val wifiInfo = wifiManager.connectionInfo
-        val ssid = wifiInfo.ssid
-        val bssid = wifiInfo.bssid
-        val securityStatus = checkSecurityStatus(ssid)
-
-        ssidTextView.text = "SSID: $ssid"
-        bssidTextView.text = "BSSID: $bssid"
-        securityStatusTextView.text = "Security Status: $securityStatus"
+        ssidTextView.text = "SSID: ${wifiInfo.ssid}"
+        bssidTextView.text = "BSSID: ${wifiInfo.bssid}"
+        securityStatusTextView.text = "Security Status: ${checkSecurityStatus(wifiInfo.ssid)}"
     }
 
     private fun checkSecurityStatus(ssid: String): String {
-        // Simplified security check
-        return if (ssid.contains("secure")) {
+        return if (ssid.contains("secure", ignoreCase = true)) {
             "Secure"
         } else {
             "Not Secure"
