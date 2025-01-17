@@ -139,36 +139,6 @@ Flexible: Supports connecting to networks, disconnecting, and other WiFi managem
 
 Let me know if you'd like to enhance this code, such as adding a user interface or additional functionality!
 
-Here’s a simple WiFi Inspector implementation using the node-wifi library in Node.js. This library enables WiFi scanning and provides information about available networks.
-
-
----
-
-Code
-
-1. Install Dependencies
-
-Run the following command to install the node-wifi package:
-
-npm install node-wifi
-
-2. Code Implementation
-
-// Import node-wifi module
-const wifi = require("node-wifi");
-
-// Initialize the WiFi module
-wifi.init({
-  iface: null, // Automatically uses the active network interface
-});
-
-// Function to scan and display available networks
-async function scanNetworks() {
-  try {
-    console.log("Scanning for WiFi networks...");
-
-    // Scan for available WiFi networks
-    const networks = await wifi.scan();
 
     if (networks.length === 0) {
       console.log("No WiFi networks found.");
