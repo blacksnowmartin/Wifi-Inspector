@@ -1,4 +1,4 @@
-Here’s a simple WiFi Inspector implementation using the node-wifi library in Node.js. This library enables WiFi scanning and provides information about available networks.
+80Here’s a simple WiFi Inspector implementation using the node-wifi library in Node.js. This library enables WiFi scanning and provides information about available networks.
 
 
 ---
@@ -390,4 +390,6 @@ Flexible: Supports connecting to networks, disconnecting, and other WiFi managem
 
 
 Let me know if you'd like to enhance this code, such as adding a user interface or additional functionality!
+
+# Blacksnow Martin ❄️❄️❄️
 
