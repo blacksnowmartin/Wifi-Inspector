@@ -391,5 +391,7 @@ Flexible: Supports connecting to networks, disconnecting, and other WiFi managem
 
 Let me know if you'd like to enhance this code, such as adding a user interface or additional functionality!
 
+As the years progress this repo has become unpopular.
+
 # Blacksnow Martin ❄️❄️❄️
 
