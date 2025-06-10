@@ -3,8 +3,6 @@
 
 ---
 
-Code
-
 1. Install Dependencies
 
 Run the following command to install the node-wifi package:
