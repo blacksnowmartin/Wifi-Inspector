@@ -387,9 +387,5 @@ Simple API: Easy to integrate with other applications or extend for more functio
 Flexible: Supports connecting to networks, disconnecting, and other WiFi management features.
 
 
-Let me know if you'd like to enhance this code, such as adding a user interface or additional functionality!
-
-
-
 # Blacksnow Martin ❄️❄️❄️
 
